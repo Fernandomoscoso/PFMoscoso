@@ -3,79 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="shortcut icon" href="./Img/icon.png"><!--icono de la pagina-->
-    <link rel="stylesheet" href="./style/style.css"> <!--css linkeado-->
+    <link rel="stylesheet" href="./css/style.css"> <!--css linkeado-->
     <title>EstampArg</title>
+    <title>Carousel/Slideshow</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div>
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./Index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./Pages/Ofertas.html">Ofertas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./Pages/Productos.html">Productos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./Pages/Preguntas.html">Preguntas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./Pages/Contacto.html">Contacto</a>
-            </li>
+    <div class="respmenu">
+        <input type="checkbox">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+        <nav>
+        <ul>
+            <li><a href="./Pages/Contacto.html">Contacto</a></li>
+            <li><a href="./Pages/Ofertas.html">Ofertas</a></li>
+            <li><a href="./Pages/Preguntas.html">Preguntas</a></li>
+            <li><a href="./Pages/Productos.html">Productos</a></li>
+            <li><a href="./Index.html">Inicio</a></li>
         </ul>
+        </nav>
     </div>
     <div class="TextoInicial">
             <p>Bienvenidos a Estamparg, un lugar donde encontraras todo sobre estampados y productos al respecto.</p>
-    <div id="carouselExample" class="carouselslide">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="./Img/Remeraneg.png" class="d-block w-100" alt="...">
-        </div>
-    <div class="carousel-item">
-        <img src="./Img/remerabei.png" class="d-block w-100" alt="..." >
-    </div>
-    <div class="carousel-item">
-        <img src="./Img/Remerablan.png" class="d-block w-100" alt="...">
-    </div>
-    </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <div id="carousel-single" class="carousel slide add-big-bottom" data-ride="carousel">
-        <!-- Indicators -->
+    <div class="container">
+        <br>
+        <div id="theCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicadores -->
         <ol class="carousel-indicators">
-            <li data-target="#carousel-single" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-single" data-slide-to="1" class=""></li>
+            <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#theCarousel" data-slide-to="1"></li>
+            <li data-target="#theCarousel" data-slide-to="2"></li>
+            <li data-target="#theCarousel" data-slide-to="3"></li>
+            
         </ol>
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <figure class="item preload loaded active" data-img-src="https://picsum.photos/750/400?image=0">
-            <img src="./Img/Remerablan.png" alt="remerablanca">
-            <figcaption class="carousel-caption">
-                img-article </figcaption>
-            </figure>
-            <figure class="item preload loaded" data-img-src="https://picsum.photos/750/400">
-            <img src="./Img/remerabei.png" alt="remerabei">
-            <figcaption class="carousel-caption">
-                test – slider </figcaption>
-            </figure>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="./Img/remerabei.png" alt="RemeraBeige" > 
+                <div class="carousel-caption d-none d-md-block">
+            <h3>De algodon de llama</h3>
+            <p>Made in Perú</p>
         </div>
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-single" data-slide="prev">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.422 7.406L10.828 12l4.594 4.594L14.016 18l-6-6 6-6z"></path></svg>
-        </a>
-        <a class="right carousel-control" href="#carousel-single" data-slide="next">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.984 6l6 6-6 6-1.406-1.406L13.172 12 8.578 7.406z"></path></svg>
-        </a>
-    </div>
+            </div>                
+                    <div class="item">
+                        <img src="./Img/Remerablan.png" alt="RemeraBlanca" width="600" height="424"> 
+                        <div class="carousel-caption d-none d-md-block">
+                    <h3> De algodon de llama</h3>
+                    <p>Made in Perú</p>
+                </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="./Img/Remeraneg.png" alt="RemeraNegra" width="600" height="424">
+                        <div class="carousel-caption d-none d-md-block">
+                    <h3>De algodon de llama</h3>
+                    <p>Made in Perú</p>
+                </div>
+                    </div>
+                        <div class="item">
+                        <img src="./Img/Remerarosa.png" alt="RemeraRosa" width="600" height="424"> 
+                        <div class="carousel-caption d-none d-md-block">
+                    <h3>De algodon de llama</h3>
+                    <p>Made in Perú</p>
+                </div>
+                    </div>
+            
+            
+                    <a class="left carousel-control" href="#theCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">anterior</span>
+                    </a>
+                    <a class="right carousel-control" href="#theCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">siguiente</span>
+                    </a>
+                </div>
+                </div>
 </body>
 </html>     
